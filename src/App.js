@@ -20,9 +20,10 @@ import {formattedCallerId, formattedDuration} from "./Utils";
 import useWebSocket, { ReadyState } from 'react-use-websocket';
 
 const Login = props => {
+  const defaultPassword = process.env.REACT_APP_SIP_PASSWORD;
   const [username, setUserName] = useState('');
   const [domain, setDomain] = useState("");
-  const [password, setPassword] = useState("");
+  const [password, setPassword] = useState(defaultPassword);
   const loading = useSelector(state => state.loading, shallowEqual);
   const dispatch = useDispatch();
   const onLogin = () => {
@@ -45,11 +46,12 @@ const Login = props => {
         <Form.Control type="text" placeholder="Login domain" />
       </Form.Group>
 
-
+      {defaultPassword === "" && 
       <Form.Group controlId="password" onChange={e=>setPassword(e.target.value)}>
         <Form.Label>Password</Form.Label>
-        <Form.Control type="text" placeholder="Password" />
+        <Form.Control type="password" placeholder="Password" defaultValue={defaultPassword} />
       </Form.Group>
+      }
 
       <Button variant="primary" onClick={onLogin} disabled={loading}>
         {loading && <Spinner
