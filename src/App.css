@@ -1,0 +1,213 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100);
+body{
+  font-family: 'Roboto';
+}
+
+nav.navbar{
+  display: flex;
+  align-items: center;
+  min-height: 65px;
+}
+.login-container{
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.info-container{
+  margin:50px;
+  margin-top: 100px;
+}
+
+.login{
+  width: 400px;
+  padding: 40px;
+  background-color: #F7F7F7;
+  margin: 0 auto 10px;
+  border-radius: 2px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+.name{
+  color: #fff;
+  margin: 0 15px;
+  font-weight: bold;
+}
+.message{
+  margin-top: 10px;
+}
+.loading{
+  margin-right: 10px;
+}
+
+/* Progress Bar */
+/* Thanks to https://codepen.io/holdencreative/pen/vEVbwv */ 
+.progress-loader {
+  position: relative;
+  height: 4px;
+  display: block;
+  width: 100%;
+  background-color: #acece6;
+  background-clip: padding-box;
+  overflow: hidden; }
+  .progress-loader .determinate {
+    position: absolute;
+    background-color: inherit;
+    top: 0;
+    bottom: 0;
+    background-color: #26a69a;
+    transition: width .3s linear; }
+  .progress-loader .indeterminate {
+    background-color: #26a69a; }
+    .progress-loader .indeterminate:before {
+      content: '';
+      position: absolute;
+      background-color: inherit;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      will-change: left, right;
+      -webkit-animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+              animation: indeterminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite; }
+    .progress-loader .indeterminate:after {
+      content: '';
+      position: absolute;
+      background-color: inherit;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      will-change: left, right;
+      -webkit-animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+              animation: indeterminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+      -webkit-animation-delay: 1.15s;
+              animation-delay: 1.15s; }
+
+@-webkit-keyframes indeterminate {
+  0% {
+    left: -35%;
+    right: 100%; }
+  60% {
+    left: 100%;
+    right: -90%; }
+  100% {
+    left: 100%;
+    right: -90%; } }
+@keyframes indeterminate {
+  0% {
+    left: -35%;
+    right: 100%; }
+  60% {
+    left: 100%;
+    right: -90%; }
+  100% {
+    left: 100%;
+    right: -90%; } }
+@-webkit-keyframes indeterminate-short {
+  0% {
+    left: -200%;
+    right: 100%; }
+  60% {
+    left: 107%;
+    right: -8%; }
+  100% {
+    left: 107%;
+    right: -8%; } }
+@keyframes indeterminate-short {
+  0% {
+    left: -200%;
+    right: 100%; }
+  60% {
+    left: 107%;
+    right: -8%; }
+  100% {
+    left: 107%;
+    right: -8%; } }
+/* End Progress Bar */
+
+.dialer {
+    margin: 20px auto 0;
+    width: 280px;
+    text-align: center;
+    box-shadow: 20px 20px 10px grey;
+}
+
+.StatusArea {
+    padding-top: 7px;
+    height: 120px;
+    width: 280px;
+    text-align: center;
+    font-size: 16px;
+    background-color: #0470bf;
+    color: white;
+    font-weight: bold;
+    border-style: outset;
+    border-color: #599ef2;
+}
+
+.functionArea {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(2px, auto);
+    text-align: center;
+    background-color: #eaeaea;
+}
+
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(80px, auto);
+    text-align: center;
+    background-color: #eaeaea;
+}
+
+.button {
+    margin: 18px auto 0;
+    border-radius: 4px;
+    width: 85%;
+    height: 70%;
+    padding: 8px;
+    background: #027cd5;
+    color: white;
+    border-color: #599ef2;
+    border-style: outset;
+    font-size: 18px;
+    cursor: pointer;
+    font-family: 'Roboto', serif;
+}
+
+.button:hover {
+    background: #166095;
+}
+
+input[type="display"] {
+    height: 60px;
+    width: 280px;
+    text-align: center;
+    font-size: 22px;
+    background-color: #0470bf;
+    color: white;
+    font-weight: bold;
+    outline: none !important;
+    border-style: none;
+}
+
+.functionButton {
+    margin: 10px auto;
+    width: 60px;
+    height: 60px;
+    background-color: #eaeaea;
+    border-style: none;
+    outline: none !important;
+}
+
+.functionButton:hover {
+    opacity: 0.50;
+}
+
+.sub-dig {
+    font-size: 12px;
+    font-weight: 500;
+    position: relative;
+    top: -3px;
+    pointer-events: none;
+}
