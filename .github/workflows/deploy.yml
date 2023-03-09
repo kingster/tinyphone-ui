@@ -25,4 +25,4 @@ jobs:
     - name: Install Dependencies 
       run: npm ci
     - name: Publish Site
-      run: CI=false && npm run deploy
+      run: CI=false npm run deploy
