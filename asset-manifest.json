@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/voiceip/tinyphone-ui/static/css/main.db0f6473.css",
+    "main.js": "/voiceip/tinyphone-ui/static/js/main.ad680a39.js",
+    "static/media/logo.png": "/voiceip/tinyphone-ui/static/media/logo.799e606163e8857f84c7.png",
+    "index.html": "/voiceip/tinyphone-ui/index.html",
+    "main.db0f6473.css.map": "/voiceip/tinyphone-ui/static/css/main.db0f6473.css.map",
+    "main.ad680a39.js.map": "/voiceip/tinyphone-ui/static/js/main.ad680a39.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.db0f6473.css",
+    "static/js/main.ad680a39.js"
+  ]
+}
